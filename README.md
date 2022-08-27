@@ -25,7 +25,7 @@ To Test for pipeline run the command `ping -c 5 www.google.com | grep rtt` in th
 * **rmdir** removes specified directory, if complete path not specified then removes the specified directory at pwd `working`
 * **env** lists all the environment parameters. `working`
 * **clear** clears the shell screen `working`
-Rest other commands are executed using $execvp()$ command `working`
+Rest other commands are executed using $ execvp() $ command `working`
 ## Foreground and Background Processes
 The kcsh shell also knows how to launch the programs in foreground and background. Using **&** at the end of the command will run the program in background more. For example try running **sleep 3** and **sleep 3 &** command in the shell and observe the outcome. `working`
 **Note :** Foreground and background processes **not working** for pipelined commands
