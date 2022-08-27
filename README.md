@@ -1,7 +1,7 @@
 # KCSH
 KCSH is a simple implementation of shell in C. It demonstrates the basics of how shell works. Since its purpose is demonstration (not completeness of features, it has many limitations. KCSH runs in interactive mode.
 KCSH is most rudimentary shell and is structured as the following loop:
-1. The shell runs continuously and displays a prompt of the format $(pwd:~$) where pwd stands for the **present work directory**
+1. The shell runs continuously and displays a prompt of the format $(pwd:~$$$)$ where pwd stands for the **present work directory**
 2. The shell reads input one at a time
 3. Parse the input into program name and an array of parameters
 4. Use $fork()$ system call to spawn a new child process 
