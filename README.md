@@ -5,7 +5,7 @@ KCSH is most rudimentary shell and is structured as the following loop:
 2. The shell reads input one at a time
 3. Parse the input into program name and an array of parameters
 4. Use $fork()$ system call to spawn a new child process 
-    * The child process uses $execvp()$ system call to launch specified program
+    * The child process uses $execvp$() system call to launch specified program
     * The parent process uses $wait()$ system call to wait for child process to terminate
 5. Once the child process finishes. The shell repeates the loop.
 6. The only builtin commands are `exit`, `cd`, `history`
@@ -30,7 +30,7 @@ Rest other commands are executed using $execvp()$ command `working`
 The kcsh shell also knows how to launch the programs in foreground and background. Using **&** at the end of the command will run the program in background more. For example try running **sleep 3** and **sleep 3 &** command in the shell and observe the outcome. `working`
 **Note :** Foreground and background processes **not working** for pipelined commands
 ## Parsing 
-Two kind of parsing is performed. Parsing is performed separately when the input contains pipes and when the input does not contains pipe. Parsing of the input is performed using the $strtok()$ function.
+Two kind of parsing is performed. Parsing is performed separately when the input contains pipes and when the input does not contains pipe. Parsing of the input is performed using the strtok() function.
 ## Limitation
 * No functionality to execute previously executed command or to browse the previously executed command using tab and arrow key. 
 * Commands must be on a single line
