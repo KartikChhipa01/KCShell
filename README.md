@@ -5,7 +5,7 @@ KCSH is most rudimentary shell and is structured as the following loop:
 2. The shell reads input one at a time
 3. Parse the input into program name and an array of parameters
 4. Use $fork()$ system call to spawn a new child process 
-    * The child process uses $execvp$() system call to launch specified program
+    * The child process uses execvp() system call to launch specified program
     * The parent process uses $wait()$ system call to wait for child process to terminate
 5. Once the child process finishes. The shell repeates the loop.
 6. The only builtin commands are `exit`, `cd`, `history`
