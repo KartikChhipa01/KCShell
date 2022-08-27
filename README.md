@@ -5,7 +5,7 @@ KCSH is most rudimentary shell and is structured as the following loop:
 2. The shell reads input one at a time
 3. Parse the input into program name and an array of parameters
 4. Use $fork()$ system call to spawn a new child process 
-    * The child process uses execvp() system call to launch specified program
+    * The child process uses $execvp()$ system call to launch specified program
     * The parent process uses $wait()$ system call to wait for child process to terminate
 5. Once the child process finishes. The shell repeates the loop.
 6. The only builtin commands are `exit`, `cd`, `history`
@@ -25,7 +25,7 @@ To Test for pipeline run the command `ping -c 5 www.google.com | grep rtt` in th
 * **rmdir** removes specified directory, if complete path not specified then removes the specified directory at pwd `working`
 * **env** lists all the environment parameters. `working`
 * **clear** clears the shell screen `working`
-Rest other commands are executed using $execvp()$ command `working`
+Rest other commands are executed using execvp() command `working`
 ## Foreground and Background Processes
 The kcsh shell also knows how to launch the programs in foreground and background. Using **&** at the end of the command will run the program in background more. For example try running **sleep 3** and **sleep 3 &** command in the shell and observe the outcome. `working`
 **Note :** Foreground and background processes **not working** for pipelined commands
